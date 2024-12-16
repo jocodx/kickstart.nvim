@@ -222,6 +222,8 @@ return {
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+      require('lspconfig').gleam.setup {}
+
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)

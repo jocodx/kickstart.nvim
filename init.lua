@@ -1,4 +1,3 @@
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -119,7 +118,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -133,8 +131,8 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   { import = 'custom.plugins' },
-
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
